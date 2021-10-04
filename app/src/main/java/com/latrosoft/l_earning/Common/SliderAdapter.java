@@ -1,4 +1,4 @@
-package com.latrosoft.l_earning;
+package com.latrosoft.l_earning.Common;
 
 
 import android.content.Context;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.latrosoft.l_earning.R;
 
 public class SliderAdapter extends PagerAdapter {
 
