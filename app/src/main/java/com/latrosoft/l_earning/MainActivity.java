@@ -3,9 +3,11 @@ package com.latrosoft.l_earning;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -16,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private SliderAdapter mSliderAdapter;
     private LinearLayout mDotsLayout;
     private TextView[] mTextView;
+    private TextView getstart;
+    private TextView next;
     int current =0;
 
     @Override
@@ -25,12 +29,29 @@ public class MainActivity extends AppCompatActivity {
 
         slider = findViewById(R.id.slide_view_pager);
         mDotsLayout = findViewById(R.id.dotLayout);
-
+        getstart=findViewById(R.id.getstart);
+        next = findViewById(R.id.next);
         mSliderAdapter= new SliderAdapter(this);
         slider.setAdapter(mSliderAdapter);
-        addDots(0);
+        addDots(current);
         slider.addOnPageChangeListener(mOnPageChangeListener);
 
+
+        getstart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,SplashScreen.class);
+                startActivity(i);
+                finish();
+            }
+        });
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    slider.setCurrentItem(  current+1);
+
+            }
+        });
     }
 
     public void addDots(int position){
@@ -46,6 +67,17 @@ public class MainActivity extends AppCompatActivity {
         if(mTextView.length>0){
             mTextView[position].setTextColor(Color.BLUE);
         }
+        if(position==0){
+            getstart.setVisibility(View.INVISIBLE);;
+            next.setVisibility(View.VISIBLE);
+        } else if(position==1){
+            getstart.setVisibility(View.INVISIBLE);
+            next.setVisibility(View.VISIBLE);
+        }else{
+            getstart.setVisibility(View.VISIBLE);
+            next.setVisibility(View.INVISIBLE);
+        }
+
     }
     ViewPager.OnPageChangeListener mOnPageChangeListener = new ViewPager.OnPageChangeListener() {
         @Override
@@ -55,8 +87,9 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onPageSelected(int position) {
+            addDots(current);
             current = position;
-            addDots(position);
+            addDots(current);
         }
 
         @Override

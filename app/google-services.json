@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "630451351147",
+    "project_id": "learning-50f11",
+    "storage_bucket": "learning-50f11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630451351147:android:9f1dbcde78984ff3400b2e",
+        "android_client_info": {
+          "package_name": "com.latrosoft.l_earning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630451351147-sin4lq2svstg4ktoejd8r1lkfi97gasf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-xy2qTA-UCjDEIyjo0EoWzudr1wM8lx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630451351147-sin4lq2svstg4ktoejd8r1lkfi97gasf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
