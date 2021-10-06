@@ -7,10 +7,19 @@
         <entry key="..\:/Learning/app/src/main/res/layout/activity_main.xml" value="0.2015625" />
         <entry key="..\:/Learning/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
         <entry key="..\:/Learning/app/src/main/res/layout/slide_layout.xml" value="0.18" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/L-earning/app/src/main/res/drawable/bottom_nav_bg.xml" value="0.2703125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/L-earning/app/src/main/res/drawable/home.xml" value="0.2703125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/L-earning/app/src/main/res/drawable/rounded_rectangle.xml" value="0.2703125" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/L-earning/app/src/main/res/layout/activity_dash_board.xml" value="0.21920289855072464" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/L-earning/app/src/main/res/layout/activity_login.xml" value="0.21875" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/L-earning/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/L-earning/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/L-earning/app/src/main/res/layout/banner_item.xml" value="0.21467391304347827" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/L-earning/app/src/main/res/layout/course.xml" value="0.21467391304347827" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/L-earning/app/src/main/res/layout/home.xml" value="0.21920289855072464" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/L-earning/app/src/main/res/layout/my_course.xml" value="0.21467391304347827" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/L-earning/app/src/main/res/layout/profile.xml" value="0.21467391304347827" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/L-earning/app/src/main/res/menu/bottom_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

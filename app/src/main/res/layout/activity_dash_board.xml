@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg"
     tools:context=".DashBoard">
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/chip_nav"
+        >
 
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </FrameLayout>
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/chip_nav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="30dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_nav_bg"
+        app:cnb_menuResource="@menu/bottom_menu" />
+</RelativeLayout>

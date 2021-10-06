@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 mDotsLayout.addView(mTextView[i]);
         }
         if(mTextView.length>0){
-            mTextView[position].setTextColor(Color.BLUE);
+            mTextView[position].setTextColor(getResources().getColor(R.color.blue_200));
         }
         if(position==0){
             getstart.setVisibility(View.INVISIBLE);;

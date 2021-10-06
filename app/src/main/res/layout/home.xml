@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bg"
+    android:id="@+id/home_fragment"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:padding="16dp"
+        android:id="@+id/top_bar"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <TextView
+            android:id="@+id/greet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Hello,"
+            android:textColor="#000"
+            android:textSize="24dp"></TextView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/greet"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Balaji Sivasakthi"
+            android:textColor="@color/black"
+            android:textSize="28dp"
+            android:textStyle="bold"></TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:padding="16dp"
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar">
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/search"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_rectangle"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search"
+                    android:textSize="18sp"></TextView>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/filter">
+
+            </ImageView>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_layout"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Feature"
+            android:textSize="24dp"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/feature_recyler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+</RelativeLayout>
