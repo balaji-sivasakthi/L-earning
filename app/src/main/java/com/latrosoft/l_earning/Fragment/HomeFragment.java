@@ -35,13 +35,16 @@ public class HomeFragment extends Fragment {
         ArrayList<Banner> mBannerList = new ArrayList<>();
         ArrayList<Feature> mFeatureList = new ArrayList<>();
 
-       mBannerList.add(new Banner("https://www.pngkey.com/png/full/776-7769033_pink-orange-gradient-banner-white-dot-with-abstract.png","qwe12fe2"));
-       mBannerList.add(new Banner("https://www.pngkey.com/png/full/776-7769033_pink-orange-gradient-banner-white-dot-with-abstract.png","qwe12e2"));
-//
-//        mFeatureList.add(new Feature("link","asdfg","12345"));
+       mBannerList.add(new Banner("https://i.ytimg.com/vi/nqMiCdfrIx8/maxresdefault.jpg","qwe12fe2"));
+       mBannerList.add(new Banner("https://i.ytimg.com/vi/XHIdvyu3pfE/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC0oxF0BcQSC1OBy_G7WWUzzlYXgQ","qwe12e2"));
+
+        mFeatureList.add(new Feature("web-dev","Web development Html, CSS, Javascript","https://i.ytimg.com/vi/g1k9Xo2fQpw/maxresdefault.jpg","2599","599"));
+        mFeatureList.add(new Feature("web-dev","Web development Html, CSS, Javascript","https://i.ytimg.com/vi/VaqLRdel5FE/maxresdefault.jpg","1999","499"));
+        mFeatureList.add(new Feature("web-dev","Web development Html, CSS, Javascript","https://i.ytimg.com/vi/UHNcLUek7bA/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDLJbJ06zHJ1T6mB5EpmS0m779wYA","4476","36700"));
         mBannerRecyler.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+        mFeatureRecylcer.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
         mBannerRecyler.setAdapter(new BannerAdapter(mBannerList,getContext()));
-//        mFeatureRecylcer.setAdapter(new FeatureAdapter(mFeatureList));
+        mFeatureRecylcer.setAdapter(new FeatureAdapter(mFeatureList,getContext()));
 
         return view;
     }
