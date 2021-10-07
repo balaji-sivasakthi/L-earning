@@ -57,6 +57,8 @@ public class LoginActivity extends AppCompatActivity {
                 .requestIdToken(getString(R.string.key))
                 .requestEmail()
                 .requestProfile()
+                .requestId()
+
                 .build();
         googleSignInClient = GoogleSignIn.getClient(this,gso);
     }

@@ -23,6 +23,7 @@
 
     </RelativeLayout>
     <TextView
+        android:id="@+id/profile_name"
         android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
         android:textSize="32sp"
@@ -33,7 +34,7 @@
 
     </TextView>
 <Button
-
+    android:id="@+id/logout"
     android:drawableRight="@drawable/ic_logout"
     android:text="Logout"
     android:textSize="18dp"
