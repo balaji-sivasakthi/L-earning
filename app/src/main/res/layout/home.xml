@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:background="@color/bg"
     android:id="@+id/home_fragment"
     android:layout_height="match_parent">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
     <RelativeLayout
         android:padding="16dp"
         android:id="@+id/top_bar"
@@ -50,76 +48,109 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/search"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/rounded_rectangle"
                 android:gravity="center_vertical"
                 android:padding="10dp">
 
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_baseline_search_24">
+
+                </ImageView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
                     android:text="Search"
                     android:textSize="18sp"></TextView>
-            </LinearLayout>
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/filter">
+            </RelativeLayout>
 
-            </ImageView>
+
         </RelativeLayout>
 
 
     </RelativeLayout>
+    <ScrollView
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_below="@id/search_layout"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <TextView
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_alignParentStart="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Feature"
-        android:textSize="24dp"></TextView>
-    <TextView
-        android:layout_alignParentEnd="true"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/blue_200"
-        android:fontFamily="@font/poppins_medium"
-        android:text="view All"
-        android:textSize="24dp"></TextView>
+            android:layout_below="@id/search_layout"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <androidx.viewpager.widget.ViewPager
+
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"></androidx.viewpager.widget.ViewPager>
+
+                <LinearLayout
+                    android:id="@+id/dots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:focusable="false"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="Feature"
+                        android:textSize="24dp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="view All"
+                        android:textColor="@color/blue_200"
+                        android:textSize="24dp"></TextView>
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+
+                    android:id="@+id/feature_recyler"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
 </RelativeLayout>
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/feature_recyler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
-    </LinearLayout>
-</RelativeLayout>
-
-
-
-</ScrollView>

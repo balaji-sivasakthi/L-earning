@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
 import com.latrosoft.l_earning.Model.Banner;
@@ -15,46 +16,42 @@ import com.latrosoft.l_earning.R;
 
 import java.util.ArrayList;
 
-public class BannerAdapter extends RecyclerView.Adapter<BannerAdapter.ViewHoder> {
+public class BannerAdapter extends PagerAdapter {
 
         private ArrayList<Banner> mBannerList;
         private Context mContext;
+        private LayoutInflater mLayoutInflator;
 
     public BannerAdapter(ArrayList<Banner> mBannerList,Context mContext) {
         this.mBannerList = mBannerList;
         this.mContext =mContext;
+        mLayoutInflator =(LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
     }
 
 
-
-    @NonNull
     @Override
-    public ViewHoder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.banner_item,parent,false);
-
-        return new ViewHoder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewHoder holder, int position) {
-        Banner  banner = mBannerList.get(position);
-        Glide.with(mContext).load(banner.getImageLink()).into(holder.bannerImg);
-
-
-    }
-
-    @Override
-    public int getItemCount() {
+    public int getCount() {
         return mBannerList.size();
     }
 
-    public  class ViewHoder extends RecyclerView.ViewHolder{
-        private ImageView bannerImg;
-      public ViewHoder(@NonNull View itemView)
-      {
-          super(itemView);
-          bannerImg = itemView.findViewById(R.id.banner_image);
-      }
-  }
+    @Override
+    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
+        return view == object;
+    }
+
+    @NonNull
+    @Override
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+      View view=  mLayoutInflator.inflate(R.layout.banner_item,container,false);
+      ImageView banner_img= view.findViewById(R.id.banner_image);
+      Glide.with(mContext).load(mBannerList.get(position).getImageLink()).into(banner_img);
+      container.addView(view);
+        return view;
+    }
+
+    @Override
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        container.removeAllViews();
+    }
 }
