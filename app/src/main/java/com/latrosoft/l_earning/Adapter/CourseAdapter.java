@@ -71,11 +71,12 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
                public void onClick(View view) {
                    Course course = mCourseList.get(getAdapterPosition());
                    Intent i = new Intent(mContext.getApplicationContext(), SignleActivity.class);
-//                   i.putExtra("id",course.getId());
+                   i.putExtra("id",course.getId());
                    i.putExtra("link",course.getImgLink());
-//                   i.putExtra("TItle",course.getTitle());
-//                   i.putExtra("price",course.getPrice());
-//                   i.putExtra("original",course.getOrginalPrice());
+                   i.putExtra("title",course.getTitle());
+                   i.putExtra("price",course.getPrice());
+                   i.putExtra("original",course.getOrginalPrice());
+
                    mContext.startActivity(i);
                }
            });

@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Learning">
         <activity
+            android:name=".CheckOut"
+            android:exported="true" />
+        <activity
             android:name=".SignleActivity"
             android:exported="true" />
         <activity
