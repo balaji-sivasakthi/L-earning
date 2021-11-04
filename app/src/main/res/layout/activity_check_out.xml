@@ -31,6 +31,89 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_below="@id/header"
-        android:background="#f2f2f2"
-        android:padding="30dp"></RelativeLayout>
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/checkout_bill"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/price_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price:"
+            android:textSize="24sp"></TextView>
+
+        <TextView
+            android:id="@+id/checkout_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/price_label"
+            android:gravity="end"
+            android:text="1200"
+            android:textSize="24sp"></TextView>
+
+        <TextView
+            android:id="@+id/offer_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price_label"
+            android:text="Offer"
+            android:textSize="24sp"></TextView>
+
+        <TextView
+            android:id="@+id/checkout_offer_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkout_price"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/offer_label"
+            android:gravity="end"
+            android:text="1200"
+            android:textSize="24sp"></TextView>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/offer_label"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/total_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/offer_label"
+            android:text="Total"
+            android:textSize="24sp"></TextView>
+
+        <TextView
+            android:id="@+id/checkout_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkout_offer_price"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/offer_label"
+            android:gravity="end"
+            android:text="2400"
+            android:textSize="24sp"></TextView>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/checkout_buy"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_color"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Buy Now"
+        android:textAllCaps="false"
+        android:textSize="24dp"></Button>
 </RelativeLayout>
